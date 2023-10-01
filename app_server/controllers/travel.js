@@ -4,10 +4,6 @@ const apiOptions = {
     server: 'http://localhost:3000'
 }
 
-//from previous module save just incase
-// var fs = require('fs');
-// var trips = JSON.parse(fs.readFileSync('./data/trips.json', 'utf8'));
-
 /* render travel list view*/
 const renderTravelList = (req, res, responseBody) => {
     let message = null;
@@ -54,12 +50,3 @@ const travelList = (req, res) =>{
 module.exports = {
     travelList
 }
-
-//from previous module save just incase
-// const travel = (req, res) => {
-//     res.render('travel', { title: 'Travlr Getaways', trips});
-// };
-
-// module.exports = {
-//     travel
-// };
