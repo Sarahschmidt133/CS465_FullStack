@@ -15,15 +15,15 @@ const connect = () => {
     }), 1000);
 }
 
-mongoose.connect.on('connected', () => {
+mongoose.connection.on('connected', () => {
 
 });
 
-mongoose.connect.on('error', err => {
+mongoose.connection.on('error', err => {
 
 });
 
-mongoose.connect.on('disconnected', () => {
+mongoose.connection.on('disconnected', () => {
 
 });
 
@@ -51,6 +51,5 @@ process.once('SIGTERM', () => {
 
 connect();
 
-// Brig the Mongoose schema
-require('./travlr');
-
+// Bring the Mongoose schema
+require("./models/travlr");
