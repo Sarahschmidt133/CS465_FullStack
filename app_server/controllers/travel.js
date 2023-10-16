@@ -3,6 +3,8 @@ const { response } = require('../../app');
 const apiOptions = {
     server: 'http://localhost:3000'
 }
+const jwt = require('jsonwebtoken');
+
 
 /* render travel list view*/
 const renderTravelList = (req, res, responseBody) => {

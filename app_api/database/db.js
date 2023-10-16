@@ -53,3 +53,5 @@ connect();
 
 // Bring the Mongoose schema
 require("./models/travlr");
+
+require("./models/users");
