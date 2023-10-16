@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const jwt = require('express-jwt');
+const { expressjwt: jwt } = require('express-jwt');
 const auth = jwt({
     secret: process.env.JWT_SECRET,
     userProperty: "payload",
@@ -22,12 +22,12 @@ router
 router
     .route('/trips')
     .get(tripsController.tripsList)
-    .post(auth.tripsController.tripsAddTrip);
+    .post(tripsController.tripsAddTrip);
 
 router
     .route('/trips/:tripCode')
     .get(tripsController.tripsFindCode)
-    .put(auth,tripsController.tripsUpdateTrip);
+    .put(tripsController.tripsUpdateTrip);
 
 
 module.exports = router;

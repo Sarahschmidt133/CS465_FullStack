@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  isLoggedIn(): boolean {
+    // For now, let's assume the user is not logged in
+    return false;
+  }
 }
